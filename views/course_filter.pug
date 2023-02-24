@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+    h1 Courses
+    each cour in course
+        h3 Id: #{cour.id}
+        h4 Name: #{cour.name}
+        h4 Department: #{cour.department}
+        h4 Description: #{cour.description}
+        h4 Seats Available: #{cour.remainingSeats}
+        br

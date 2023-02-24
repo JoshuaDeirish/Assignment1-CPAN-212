@@ -1,0 +1,11 @@
+extends layout
+
+block content 
+    h1 Ongoing Courses 
+    each ongoingCourse in classes
+        h3 Course Id: #{ongoingCourse.id}
+        h3 Name: #{ongoingCourse.name}
+        h3 Department: #{ongoingCourse.department}
+        h3 Description: #{ongoingCourse.description}
+        h3 Remaining Seats: #{ongoingCourse.remainingSeats}
+        br

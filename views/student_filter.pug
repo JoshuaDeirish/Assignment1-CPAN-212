@@ -1,0 +1,31 @@
+extends layout 
+
+block content 
+    h1 Students 
+    each student in stu 
+        h2 Student 
+            h3 Id: #{student.id}
+            h3 Name: #{student.name}
+            h3 Department: #{student.department}
+            h3 Semester: #{student.semester}
+            br
+            h2 Ongoing Courses
+            each ongoingCourse in student.coursesEnrolled 
+                h3 Course Id: #{ongoingCourse.id}
+                h3 Name: #{ongoingCourse.name}
+                h3 Department: #{ongoingCourse.department}
+                h3 Description: #{ongoingCourse.description}
+                h3 Remaining Seats: #{ongoingCourse.remainingSeats} 
+                br
+            h2 Completed Courses
+            each completedCourse in student.coursesCompleted
+                h3 Course Id: #{completedCourse.id}
+                h3 Name: #{completedCourse.name}
+                h3 Department: #{completedCourse.department}
+                h3 Description: #{completedCourse.description}
+                h3 Grade: #{completedCourse.gradeAchieved}%
+                br
+        hr
+            
+
+
